@@ -1,0 +1,19 @@
+{
+  "name": "pets-extension",
+  "version": "0.1.0",
+  "description": "Chrome extension for contextual web pets",
+  "scripts": {
+    "build": "tsc --noEmit && esbuild src/content/main.ts --bundle --format=iife --outfile=build/content/content-script.js --target=es2020 && esbuild src/ui/main.ts --bundle --format=iife --outfile=build/ui/popup.js --target=es2020 && esbuild src/background/service-worker.ts --bundle --format=iife --outfile=build/background/service-worker.js --target=es2020 && cp src/ui/popup.html build/ui/popup.html && cp src/ui/popup.css build/ui/popup.css && cp manifest.json build/manifest.json && cp -r assets build/",
+    "minify": "terser build/content/content-script.js -o build/content/content-script.js -m -c drop_console=true && terser build/ui/popup.js -o build/ui/popup.js -m -c drop_console=true && terser build/background/service-worker.js -o build/background/service-worker.js -m -c drop_console=true",
+    "build:prod": "npm run build && npm run minify && find build -name '*.map' -delete && echo '✓ Production build ready'",
+    "watch": "tsc --watch",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.39",
+    "esbuild": "^0.28.0",
+    "terser": "^5.46.1",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}

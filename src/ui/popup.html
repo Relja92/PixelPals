@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelPals</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="app" class="app">
+    <!-- PAGE: HOME -->
+    <div id="page-home" class="page page--active">
+      <header class="page__header">
+        <div class="app-title">
+          <img src="../../assets/icon-128.png" alt="PixelPals" class="app-icon" />
+          <span>PixelPals</span>
+        </div>
+        <div class="header-actions">
+          <label class="toggle" title="Enable/disable all pets">
+            <input type="checkbox" id="global-toggle" class="toggle__input" />
+            <span class="toggle__track"></span>
+          </label>
+          <button id="about-link" class="info-button" title="About" aria-label="About">ⓘ</button>
+        </div>
+      </header>
+      <div id="pet-list" class="page__body"></div>
+      <footer class="page__footer">
+        <button id="add-pet-btn" class="btn btn--primary btn--full">＋ Add Pet</button>
+      </footer>
+    </div>
+
+    <!-- PAGE: ADD PET (MULTI-STEP) -->
+    <div id="page-add-pet" class="page page--hidden">
+      <header class="page__header">
+        <button class="btn--back" id="back-from-add" aria-label="Back">←</button>
+        <span class="page__title">Add Pet</span>
+        <span id="add-pet-step-indicator" class="step-indicator">Step 1 of 3</span>
+      </header>
+      <div id="add-pet-body" class="page__body"></div>
+      <footer class="page__footer">
+        <div style="display: flex; gap: 8px;">
+          <button id="add-pet-prev-btn" class="btn btn--secondary btn--full" hidden>Back</button>
+          <button id="add-pet-next-btn" class="btn btn--primary btn--full">Next</button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- PAGE: PET SETTINGS -->
+    <div id="page-pet-settings" class="page page--hidden">
+      <header class="page__header">
+        <button class="btn--back" id="back-from-settings" aria-label="Back">←</button>
+        <span id="settings-title" class="page__title"></span>
+      </header>
+      <div id="pet-settings-body" class="page__body">
+        <!-- Pet Name -->
+        <div class="section">
+          <p class="section__label">Name</p>
+          <input type="text" id="settings-name-input" class="settings-text-input" placeholder="Enter pet name" />
+        </div>
+
+        <!-- Enabled toggle -->
+        <div class="section">
+          <div class="setting-row">
+            <span class="setting-row__label">Enabled</span>
+            <label class="toggle">
+              <input type="checkbox" id="settings-enabled-toggle" class="toggle__input" />
+              <span class="toggle__track"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Color picker (if >1 color) -->
+        <div id="settings-color-section" class="section" hidden>
+          <p class="section__label">Color</p>
+          <div id="settings-color-picker" class="color-picker" role="radiogroup" aria-label="Pet color">
+            <!-- populated by JS -->
+          </div>
+        </div>
+
+        <!-- Speed Control -->
+        <div class="section">
+          <p class="section__label">Speed</p>
+          <div class="setting-row">
+            <input type="range" id="settings-speed-slider" class="settings-slider" min="1" max="5" value="3" />
+            <span id="settings-speed-label" class="settings-slider-label">3x</span>
+          </div>
+        </div>
+
+        <!-- Events -->
+        <div class="section">
+          <p class="section__label">Watch for</p>
+          <div id="settings-events" class="events-list">
+            <!-- populated by JS -->
+          </div>
+        </div>
+      </div>
+      <footer class="page__footer">
+        <button id="remove-pet-btn" class="btn btn--danger btn--full">Remove Pet</button>
+      </footer>
+    </div>
+
+    <!-- PAGE: ABOUT -->
+    <div id="page-about" class="page page--hidden">
+      <header class="page__header">
+        <button class="btn--back" id="back-from-about" aria-label="Back">←</button>
+        <span class="page__title">About</span>
+      </header>
+      <div class="page__body about-body"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
