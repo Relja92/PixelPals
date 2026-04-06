@@ -164,4 +164,4 @@ Pet pixel art assets from the [VS Code Pets](https://github.com/tonybaloney/vsco
 
 ## License
 
-MIT
+MIT — Made with ❤️ by [Relja92](https://github.com/Relja92) & [skakac](https://github.com/skakac)
