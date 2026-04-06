@@ -162,8 +162,6 @@ Pet pixel art assets from the [VS Code Pets](https://github.com/tonybaloney/vsco
 | [Karen Rustad Tolva](https://www.aldeka.net) | Crab (concept) | Website |
 | Community contributors | Chicken, Deno, Monkey, Rat, Morph, Vampire | |
 
-All pet assets licensed under MIT.
-
 ## License
 
 MIT
