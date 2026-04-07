@@ -103,7 +103,7 @@ export function createPetElement(petConfig: PetConfig): HTMLDivElement {
 
   // Initialize pet state if not exists
   if (!state.petStates.has(petConfig.id)) {
-    // Convert speed from 1-5 scale to movement speed (0.5-2.5)
+    // Convert speed from 1-15 scale to movement speed (0.5-7.5)
     const petSpeed = (petConfig.speed || 3) * 0.5;
 
     const now = Date.now();

@@ -189,11 +189,11 @@ export function renderPetSettingsPage(petId: string | null): void {
   speedSlider.type = 'range';
   speedSlider.className = 'settings-slider';
   speedSlider.min = '1';
-  speedSlider.max = '5';
+  speedSlider.max = '15';
   speedSlider.value = String(pet.speed || 3);
   speedSlider.setAttribute('aria-label', 'Pet speed');
   speedSlider.setAttribute('aria-valuemin', '1');
-  speedSlider.setAttribute('aria-valuemax', '5');
+  speedSlider.setAttribute('aria-valuemax', '15');
   speedSlider.setAttribute('aria-valuenow', String(pet.speed || 3));
   speedSlider.setAttribute('aria-valuetext', `${pet.speed || 3}x speed`);
 
