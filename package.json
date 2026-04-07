@@ -1,6 +1,6 @@
 {
   "name": "pets-extension",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Chrome extension for contextual web pets",
   "scripts": {
     "build": "tsc --noEmit && esbuild src/content/main.ts --bundle --format=iife --outfile=build/content/content-script.js --target=es2020 && esbuild src/ui/main.ts --bundle --format=iife --outfile=build/ui/popup.js --target=es2020 && esbuild src/background/service-worker.ts --bundle --format=iife --outfile=build/background/service-worker.js --target=es2020 && cp src/ui/popup.html build/ui/popup.html && cp src/ui/popup.css build/ui/popup.css && cp manifest.json build/manifest.json && cp -r assets build/",

@@ -7,7 +7,7 @@ export function renderAboutPage(): void {
       <div style="text-align: center; margin-bottom: 24px;">
         <img src="../../assets/icon-16.png" alt="PixelPals" style="width: 40px; height: 40px; image-rendering: pixelated; margin: 0 auto 8px; display: block;" />
         <p style="font-size: 16px; font-weight: 700; color: var(--color-primary); margin: 0 0 8px 0;">PixelPals</p>
-        <p style="font-size: 12px; color: var(--color-text-muted); margin: 0;">v1.0</p>
+        <p style="font-size: 12px; color: var(--color-text-muted); margin: 0;">v0.1.1</p>
       </div>
 
       <p style="font-size: 14px; line-height: 1.8; color: var(--color-text-secondary); text-align: center; margin: 0 0 24px 0;">

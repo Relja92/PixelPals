@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PixelPals",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pixel art pet companions that react to what you're doing on the web",
   "permissions": [
     "storage",
